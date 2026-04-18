@@ -1,10 +1,10 @@
-# Parking Lot Occupancy Detector
+# Parking Lot Detector
 
 A real-time parking lot occupancy detection system using OpenCV and a pre-trained machine learning classifier.
 
 ## What It Does
 
-Reads a parking lot video feed, identifies individual parking spots using a mask image, and classifies each spot as **empty** or **occupied** in real time — drawing green boxes for empty spots and red boxes for occupied ones.
+Reads a parking lot video feed, identifies individual parking spots using a mask image, and classifies each spot as **empty** or **occupied** in real time, drawing green boxes for empty spots and red boxes for occupied ones.
 
 ## How It Works
 
@@ -15,11 +15,13 @@ Reads a parking lot video feed, identifies individual parking spots using a mask
 5. Bounding boxes are drawn on the frame based on the prediction
 
 ## Project Structure
+```bash
 ├── parking_main.py   # Main detection loop
 ├── util.py           # Bounding box extraction + classifier inference
 ├── model.p           # Pre-trained ML model (imported through pickle)
 ├── mask_crop.png     # Grayscale mask defining parking spot locations
 └── parking_crop_loop.mp4  # Input parking lot video
+```
 
 ## Requirements
 
@@ -43,8 +45,10 @@ pip install opencv-python scikit-image numpy scikit-learn
 ## Model
 
 `model.p` is a pre-trained scikit-learn classifier trained on labeled images of empty vs. occupied parking spots. 
+
 Credit to the original model: https://www.youtube.com/watch?v=F-884J2mnOY&t=1691s
 
 ## Output
 Green -> Empty
+
 Red -> Occupied
