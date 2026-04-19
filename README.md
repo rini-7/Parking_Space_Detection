@@ -1,6 +1,7 @@
 # Parking Lot Detector
 
 A real-time parking lot occupancy detection system using OpenCV and a pre-trained machine learning classifier.
+![](parkingoutput.gif)
 
 ## What It Does
 
